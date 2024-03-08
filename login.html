@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel ="stylesheet" href="style.css">
+<meta name="viewport" content="width-device-width, initial-scale=1.0">
+<title> login page </title>
+<style>
+*,::before,::after
+{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+body
+{
+font-family:sans-serif;
+}
+.form-box
+{
+display: flex;
+justify-content: center;
+align-items: center;
+height : 100vh;
+}
+.form-box form
+{
+width: 360px;
+padding: 64px 32px;
+box-shadow: 0 10px 25px black;
+border-radius: 16px;
+background-color:white;
+}
+.form-title
+{
+font-weight: 500;
+margin-bottom: 48px;
+}
+h1
+{
+margin:0;
+}
+.form-control
+{
+height:48px;
+position: relative;
+margin-bottom: 1.5rem;
+}
+.form-input
+{
+position: relative;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+background: none; 
+outline: none;
+font-size: 16px;
+border: 1px solid #dadce0;
+padding: 1rem;
+border-radius: 0.5rem;
+}
+label
+{
+position: absolute;
+left: 1rem;
+top: 1rem;
+padding: 0.25rem;
+font-size: 16px;
+background-color: #ffffff;
+color: #80868b;
+transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+}
+.form-btn
+{
+padding: 12px 32px;
+margin-left: auto;
+display: block;
+outline: none;
+border: none;
+background-color: #1a73e8;
+color: #ffffff;
+font-size:17px;
+border-radius: .5rem;
+cursor: pointer;
+transition: .3s;
+}
+.form-btn:hover
+{
+box-shadow: 0 10px 36px rgba(0,0,0,.15); 
+}
+.form-input:focus ~ label,
+.form-input:not(:placeholder-shown).form-input:not(:focus) ~
+label{
+top: -0.5rem;
+left: 0.8rem;
+font-size: 0.75rem;
+color: #1a73e8;
+z-index: 10;
+}
+.form-input:focus
+{
+border: 2px solid #1a73e8;
+}
+</style>
+</head>
+<body style="background-image:url('https://avante.biz/wp-content/uploads/Backgrounds-Food/Backgrounds-Food-053.jpg')">
+<div class="form-box">
+<form name="form" action = "login.php" method ="POST">
+<h1 class = "form-title"> Login</h1>
+<div class = "form-control">
+<input type = "text" class="form-input" name="userid"
+id="userid" placeholder=" ">
+<label for=""> Username </label>
+</div>
+<div class="form-control">
+<input type="password" class="form-input" name="password"
+id="password" placeholder=" ">
+<label for=""> Password </label>
+</div>
+<input type="submit" class="form-btn" value="Sign-in">
+</br>
+Don't have an account?<a href="signin.html"> Sign-up</a>
+</form>
+</div>
+<script>
+function isvalid()
+{
+var userid = document.form.userid.value
+var password = document.form.password.value
+if(userid.length=="" && password.length=="")
+{
+alert("username and password field is empty");
+return false;
+}
+else{
+if(userid.length==""){
+alert("username is empty");
+return false;
+}
+if(password.length==""){
+alert("password is empty");
+return false;
+}
+}
+}
+</script>
+</body>
+</html>
