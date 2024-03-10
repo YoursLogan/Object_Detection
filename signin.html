@@ -1,0 +1,191 @@
+<html>
+<head>
+<style type="text/css">
+*,::after,::before{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body{
+margin: 0 100px;
+background-color: darkseagreen;
+font-family: sans-serif;
+}
+/*Menu*/
+.nav{
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 30px 0;
+        }
+.nav .logo h1{
+font-size:30px;
+font-family: sans-serif;
+color: black;
+}
+.nav .logo b{
+color:blue;
+}
+.nav ul{
+display: flex;
+list-style: none;
+}
+.nav ul li{
+margin-right: 30px;
+}
+.nav ul li a {
+text-decoration: none;
+color:black;
+font-weight: 500;
+font-family: sans-serif;
+font-size: 17px;
+}
+.nav ul .active::after{
+content: ' ';
+width: 50%;
+height: 3px;
+background-color: beige;
+display: flex;
+position: relative;
+margin-left:10px;
+}
+body{
+counter-reset:section;
+text-align:center;
+}
+a{
+text-decoration:none;
+}
+.heading{
+background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+color:white;
+font-family:'sans-serif';
+text-align:center;
+}
+body{
+counter-reset:section;
+text-align:center;
+}
+.container{
+position:relative;
+top:20px;
+}
+.container h1, .container span{
+font-family:"Pt Sans", helvetica, sans-serif;
+}
+.container h1{
+text-align:center;
+color:#fff;
+font-weight:100;
+font-size:2em;
+margin-bottom:10px;
+}
+.container h2{
+font-family:"droid serif";
+font-style:italic;
+color:#d3b6ca;
+text-align:center;
+font-size:1.2em;
+}
+.container form span:before {
+counter-increment:section;
+content:counter(section);
+border:2px solid #4c2639;
+width:40px;
+height:40px;
+color:#fff;
+display:inline-block;
+border-radius:50%;
+line-height:1.6em;
+font-size:1.5em;
+position:relative;
+left:-22px;
+top:-11px;
+background:#2F1E27;
+}
+form{
+margin-top:25px;
+display:inline-block;
+}
+.fields{
+border-left:2px solid #4c2639
+}
+.container span{
+margin-bottom:22px;
+display:inline-block;
+}
+.container span:last-child{
+margin-bottom:-11px;
+}
+input{
+border:none;
+outline:none;
+display:inline-block;
+height:34px;
+vertical-align:middle;
+position:relative;
+bottom:14px;
+right:9px;
+border-radius:22px;
+width:250px;
+box-sizing:border-box;
+padding:0 18px;
+}
+</style>
+</head>
+<body>
+<section class="menu">
+<div class="nav">
+<div class="logo"><h1>AI Object<b>Detection</b></h1></div>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="feedback.html">Feedback</a></li>
+<li><a href="aboutus.html">About us</a></li>
+<li><a href="">Contact us</a></li>
+</ul>
+</div>
+</section>
+<div class="container">
+<h1> NEW REGISTER </h1>
+<form action="signin.php" method="post">
+<div class="fields">
+<span>
+<input placeholder="Name" type="text" name="name" id="name"/>
+</span>
+<br />
+<span>
+<input placeholder="Age" type="number" name="age" id="age"/>
+</span>
+<br />
+<span>
+<input placeholder="Email" type="email" name="email" id="email"/>
+</span>
+<br />
+<span>
+<input placeholder="Phone no." type="number" name="phone"
+id="phoneno"/>
+</span>
+<br />
+<span>
+<input placeholder="Set login id" type="text" name="username"
+id="login id"/>
+</span>
+<br />
+<span>
+<input placeholder="Set password" type="password" name=""
+id="password"/>
+</span>
+<br />
+<span>
+<input placeholder="Confirm password"
+type="password" name="confirmpsswd" id="confirm password"/>
+</span>
+<br />
+_____<input type="submit" value="submit">
+</div>
+<br><br>
+</form>
+</div>
+</body>
+</html>
