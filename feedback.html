@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <TITLE>Feedback Form</TITLE>
+  <style>
+  *,::after,::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+  body{
+  margin: 0 100px;
+  background-color: #F0FFF0;
+  
+  }
+  /*Menu*/
+  .nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+  }
+  .nav .logo h1{
+  font-size:30px;
+  font-family: sans-serif;
+  color: black;
+  }
+  .nav .logo b{
+  color:blue;
+  }
+  .nav ul{
+  display: flex;
+  list-style: none;
+  }
+  .nav ul li{
+  margin-right: 30px;
+  }
+  .nav ul li a {
+  text-decoration: none;
+  color:black;
+  font-weight: 500;
+  font-family: sans-serif;
+  font-size: 17px;
+  }
+  .nav ul .active::after{
+  content: ' ';
+  width: 50%;
+  height: 3px;
+  background-color: #FF4500;
+  display: flex;
+  position: relative;
+  margin-left:10px;
+  }
+  form{
+  color: white;
+  font-size: 30px;
+  }
+  h1{
+  color:white;
+  font-size: 50px;
+  }
+  </style>
+  </head>
+
+  <body>
+  <section class="menu">
+  <div class="nav">
+  <div class="logo"><h1>AI Object <b>Detection</b></h1></div>
+  <ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a class="active" href="#">Feedback</a></li>
+  <li><a href="aboutus.html">About us</a></li>
+  <li><a href="contactus.html">Contact us</a></li>
+  </ul>
+  </div>
+  </section>
+  <H1 style="color: black;">Feedback Form</H1>
+  <FORM action="feedback.php" method="post">
+  <label style="color: black;">First Name :</label> <INPUT type="text"
+  name="firstname" placeholder="Enter name here">
+  <label style="color: black;">Last Name :</label> <INPUT type="text"
+  name="lastname" placeholder="Enter surname here">
+  <BR>
+  <br>
+  <label style="color: black;">Gender :</label>
+  <input type="radio" name="Gender" value="Male" id="Male"><label
+  style="color: black;">Male</label>
+  <input type="radio" name="Gender" value="Female" id="Female"><label
+  style="color:black">Female</label>
+  <BR>
+  <br>
+  <label style="color: black;">E-mail :</label> <INPUT type="email"
+  name="mail" placeholder="E-mail address">
+  <BR>
+  <BR>
+  <label style="color: black;">Comment :</label><BR>
+  <TEXTAREA rows="6" cols="50" name="commentfield"></TEXTAREA>
+  <BR>
+  <INPUT TYPE="submit" value="Send Feedback">
+  <INPUT TYPE="reset" value="Reset">
+  </FORM>
+  </body>
+  </html>
