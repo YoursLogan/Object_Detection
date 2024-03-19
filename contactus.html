@@ -1,0 +1,204 @@
+<html>
+<head>
+<style>
+*,::after,::before{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Times New Roman', Times, serif;
+} 
+body{
+margin: 0 100px;
+background-color: #F0FFF0;
+font-family: sans-serif;
+min-height: 100vh;
+background-image: url("https://images.pexels.com/photos/9821386/pexels-photo-9821386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+background-repeat: no-repeat; 
+background-size: cover; 
+display: flex;
+}
+/*Menu*/
+.nav{
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 30px 0;
+}
+.nav .logo h1{
+font-size:30px;
+font-family: sans-serif;
+color: black;
+}
+.nav .logo b{
+color:blue;
+}
+.nav ul{
+display: flex;
+list-style: none;
+}
+.nav ul li{
+margin-right: 30px;
+}
+.nav ul li a {
+text-decoration: none;
+color:black;
+font-weight: 500;
+font-family: sans-serif;
+font-size: 17px;
+}
+.nav ul .active::after{
+content: ' ';
+width: 50%;
+height: 3px;
+background-color: #FF4500;
+
+display: flex;
+position: relative;
+margin-left:10px;
+} 
+.contact-section{ 
+width: 100%; 
+display: flex;
+justify-content: center; 
+align-items: center;
+}
+.contact-info{ 
+color:white;
+max-width: 500px; 
+line-height: 65px; 
+padding-left: 50px;
+font-size: 30px;
+}
+.contact-info i{ 
+margin-right: 20px; 
+font-size: 25px;
+}
+.contact-form{ 
+max-width: 700px;
+margin-right: 50px;
+}
+.contact-info, .contact-form{ 
+flex: 1;
+}
+.contact-form h2{ 
+color:white; 
+text-align: center; 
+font-size: 35px;
+text-transform: uppercase; 
+margin-bottom: 30px;
+}
+.contact-form .text-box{ 
+background:black; 
+color:white;
+border: none;
+width: calc(50% - 10px); 
+height: 50px;
+padding: 12px; 
+font-size: 20px; 
+border-radius: 5px;
+box-shadow: 0 1px 1px rgba(0, 0, 0, 0.977);
+margin-bottom: 20px;
+}
+.contact-form .text-box:first-child{ 
+margin-right: 15px;
+}
+.contact-form textarea{ 
+background:black; color:cornflowerblue;
+border: none; 
+width: 100%; 
+padding: 12px; 
+font-size: 15px; 
+min-height: 200px; 
+max-height: 400px; 
+resize: vertical; 
+border-radius: 5px;
+box-shadow: 0 1px 1px black; 
+margin-bottom: 20px;
+}
+.contact-form .send-btn{ 
+float: right; 
+background: #BC8F8F; 
+color:white;
+border: none; 
+width: 120px; 
+height: 40px; 
+font-size: 15px; 
+font-weight: 600;
+text-transform: uppercase; 
+letter-spacing: 2px;
+border-radius: 5px; 
+cursor: pointer; 
+transition: 0.3s;
+transition-property:all; 
+}
+.contact-form .send-btn:hover{ 
+background: #0582E3;
+}
+@media screen and (max-width: 950px){ .contact-section{ 
+flex-direction: column;
+}
+.contact-info, .contact-form{ 
+margin: 30px 50px;
+}
+.contact-form h2{ font-size: 30px;
+}
+.contact-form .text-box{ width: 100%;
+}
+}
+.clearbtn{
+border-radius: 20px; 
+border: 1px solid black; 
+color:white ;
+padding: 10px 25px; 
+background:#070707;
+} 
+</style>
+</head>
+<body>
+<section class="menu">
+<div class="nav">
+<div class="logo"><h1>AI Object  <b>Detection</b></h1></div>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="feedback.html">Feedback</a></li>
+<li><a href="aboutus.html">About us</a></li>
+<li><a href="contactus.html">Contact us</a></li>
+</ul>
+</div>
+</section>
+<br>
+<br>
+<div class="contact-section">
+<div class="contact-info">
+<script type="module" src=""></script>
+<div><ion-icon name="location-sharp">
+</ion-icon>AI Object Detection:
+</div>
+<div>
+<ion-icon name ="mail-sharp">
+</ion-icon>Email: Yourslogan@gmail.com
+</div>
+<div>
+<ion-icon name="call- sharp">
+</ion-icon>Contact Number: 9876543210</div></div>
+<div class="contact-form">
+<h2>Leave Your Message</h2>
+<form class="contact" action="" method="post">
+<input type="text" name="name" class="text-box"
+placeholder=" Name" required>
+<input type="email" name="email" class="text-box"
+placeholder=" Email" required>
+<input type="text" name="Mobile Number" class="text-box"
+placeholder="Mobile Number" required>
+<input type="text" name="Subject" class="text-box"
+placeholder="Subject" required>
+<textarea name="message" rows="5" placeholder="Your 
+Message" required></textarea>
+<input type="submit" name="submit" class="send-btn"
+value="Send">
+</form>
+</div>
+</div>
+</body>
+</html>
